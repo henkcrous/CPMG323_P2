@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  h1= title
+  if user
+    p Hi #{user.name}
+    p Welcome to #{title}
+    br
+    p Username: #{user.username}
+    p Name: #{user.name}
+    p Email: #{user.email}
+    br
+    p <a href = 'template.xlsx' target="_blank" download>Download and use excel template for most accurate results.</a> 
+    <form action="users/uploadFile" enctype="multipart/form-data" method="POST">
+      <label for="myFile">Upload Excel File:</label>
+      <input type="file" name="myFile" accept=".xlsx"/> <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    br
+    br
+    p <a href = 'template.txt' target="_blank" download>Download and use text file template for most accurate results.</a> 
+    //form(method="GET", enctype="multipart/form-data")
+      input(type="file", id="openFile", accept=".txt" )
+      p <pre id="Filecontents"> </pre>
+      //p <button id='buttonTxt' onclick="loadFileAsText()"> Upload File </button>
+    <form action="users/uploadFile" enctype="multipart/form-data" method="POST">
+      <label for="myFile">Upload Text File:</label>
+      <input type="file" name="myFile" accept=".txt"/> <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    br
+    br
+    p <a href = 'template.docx' target="_blank" download>Download and use word template for most accurate results.</a> 
+    <form action="users/uploadFile" enctype="multipart/form-data" method="POST">
+      <label for="myFile">Upload Word File:</label>
+      <input type="file" name="myFile" accept=".docx"/> <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+

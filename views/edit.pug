@@ -1,0 +1,41 @@
+extends layout
+
+
+div Email: #{user.email} <input(type="radio", id="r1", class="radio")>
+div Name: #{user.name} <input(type="radio", id="r2", class="radio")>
+div ID: #{user.id} <input(type="radio", id="r3", class="radio")>
+div Title: #{user.title} <input(type="radio", id="r4", class="radio")>
+div Phone number: #{user.phonenumber} <input(type="radio", id="r5", class="radio")>
+div Gender: #{user.gender} <input(type="radio", id="r6", class="radio")>
+div Salary: #{user.salary} <input(type="radio", id="r7", class="radio")>
+div Age: #{user.age} <input(type="radio", id="r8", class="radio")>
+div Language: #{user.language} <input(type="radio", id="r9", class="radio")>
+div Race: #{user.race} <input(type="radio", id="r10", class="radio")>
+
+<script>
+
+    function clasify() {
+        var email = Boolean(true);
+        var name = Boolean(true);
+        var id = Boolean(true);
+        var title = Boolean(false);
+        var phone = Boolean(true);
+        var gender = Boolean(true);
+        var salary = Boolean(false);
+        var age = Boolean(false);
+        var language = Boolean(false);
+        var race = Boolean(false);
+
+    var r1 = document.getElementByID('r1');
+    var r2 = document.getElementByID('r2');
+    var r3 = document.getElementByID('r3');
+    var r4 = document.getElementByID('r4');
+    var r5 = document.getElementByID('r5');
+    var r6 = document.getElementByID('r6');
+    var r7 = document.getElementByID('r7');
+    var r8 = document.getElementByID('r8');
+    var r9 = document.getElementByID('r9');
+    var r10 = document.getElementByID('r10');
+    }
+
+</script>
